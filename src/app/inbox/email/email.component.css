@@ -12,6 +12,7 @@
 .email-text {
   padding: 0.5rem;
   background-color: #f9f9f989;
+  overflow: hidden;
 }
 .sticky {
   position: sticky;
