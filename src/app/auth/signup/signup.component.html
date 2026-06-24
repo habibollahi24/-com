@@ -1,0 +1,43 @@
+<div class="form-container">
+  <h1 class="is-size-3 has-text-weight-semibold mb-5">Create Account</h1>
+  <form [formGroup]="signUpForm" (submit)="onSubmit()">
+    <app-input label="Username">
+      <input
+        type="text"
+        formControlName="username"
+        class="input is-rounded"
+        placeholder="user 125"
+      />
+      <app-error-field [control]="signUpForm.controls.username" />
+    </app-input>
+
+    @if (signUpForm.controls.username.pending) {
+      <p>loading...</p>
+    }
+
+    <app-input label="Password">
+      <input type="text" formControlName="password" class="input is-rounded" />
+      <app-error-field [control]="signUpForm.controls.password" />
+    </app-input>
+
+    <app-input label="PasswordConfirmation">
+      <input
+        type="text"
+        formControlName="passwordConfirmation"
+        class="input is-rounded"
+      />
+      <app-error-field [control]="signUpForm.controls.passwordConfirmation" />
+    </app-input>
+
+    <app-error-field [control]="signUpForm" />
+
+    <button
+      type="submit"
+      [disabled]="signUpForm.invalid"
+      class="button is-link is-rounded mt-4"
+      [class]="{ 'is-loading': isSubmiting() }"
+    >
+      Register
+    </button>
+  </form>
+</div>

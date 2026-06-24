@@ -1,0 +1,12 @@
+.card {
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #eeee;
+}
+
+.email-active {
+  border: 3px solid #465bfcee;
+  transform: scale(1.04);
+}

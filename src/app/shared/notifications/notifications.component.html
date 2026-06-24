@@ -1,0 +1,16 @@
+@if (notifications$ | async; as notifications) {
+  <div class="wrapper">
+    @for (notification of notifications; track notification.id) {
+      <div
+        class="notification is-light"
+        animate.enter="fade-in"
+        animate.leave="fade-out"
+        [class.is-success]="notification.status === 'succes'"
+        [class.is-danger]="notification.status === 'error'"
+      >
+        <p>{{ notification.message }}</p>
+        <button (click)="onDelete(notification.id)" class="delete"></button>
+      </div>
+    }
+  </div>
+}

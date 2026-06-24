@@ -1,0 +1,30 @@
+@if (isMobile$ | async) {
+  @if (router.url === "/inbox") {
+    <div class="p-2">
+      <app-create-email></app-create-email> <app-inbox-list></app-inbox-list>
+    </div>
+  } @else {
+    <div class="sidebar p-2">
+      <button (click)="location.back()" class="button mb-2">< back</button>
+      <router-outlet />
+    </div>
+  }
+} @else {
+  <div class="panel" style="gap: 2rem">
+    <div class="sidebar">
+      <app-create-email></app-create-email>
+      <app-inbox-list></app-inbox-list>
+    </div>
+
+    <div class="contents">
+      @if (isNavigating()) {
+        <div
+          class="skeleton-block"
+          style="height: 95%; border-radius: 15px"
+        ></div>
+      } @else {
+        <router-outlet />
+      }
+    </div>
+  </div>
+}

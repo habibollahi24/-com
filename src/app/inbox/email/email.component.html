@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-content">
+    <div>
+      <p class="is-size-6 has-text-link has-text-weight-semibold is-italic">
+        Subject:
+      </p>
+      <p class="subtitle">{{ email().subject }}</p>
+      <p class="is-size-6 has-text-link has-text-weight-semibold is-italic">
+        From:
+      </p>
+      <p class="subtitle">{{ email().from }}</p>
+      <p class="is-size-6 has-text-link has-text-weight-semibold is-italic">
+        To Me:
+      </p>
+      <p class="tag is-link is-light">{{ email().to }}</p>
+    </div>
+    <app-replay-email [email]="email()"></app-replay-email>
+  </div>
+  <section class="email-text subtitle" [innerHTML]="email().html"></section>
+  <!-- {{ email() | json }} -->
+</div>

@@ -1,0 +1,95 @@
+/* .modal-container {
+  background: rgb(244, 244, 244);
+  border-radius: 30px;
+  padding: 1rem;
+  overflow: auto;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+.modal-body {
+  padding: 1rem;
+}
+.modal-footer {
+  padding: 1rem;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+} */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.664);
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 1001;
+  /* width: 90%; */
+  max-width: 90%;
+  min-width: 90%;
+}
+@media screen and (min-width: 600px) {
+  .modal-container {
+    min-width: 450px;
+    max-width: 100%;
+  }
+}
+.modal-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+button {
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* کلاس انیمیشن خروج */
+.fade-out {
+  animation: fadeOut 2s ease-in-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="form-container">
+  <h1 class="is-size-3 has-text-weight-semibold mb-5">Go to Account</h1>
+  <form [formGroup]="signInForm" (submit)="onSubmit()">
+    <app-input label="Username">
+      <input
+        type="text"
+        formControlName="username"
+        class="input is-rounded"
+        placeholder="user 125"
+      />
+      <app-error-field [control]="signInForm.controls.username" />
+    </app-input>
+
+    <app-input label="Password">
+      <input type="text" formControlName="password" class="input is-rounded" />
+      <app-error-field [control]="signInForm.controls.password" />
+    </app-input>
+
+    <button
+      type="submit"
+      [disabled]="signInForm.invalid"
+      class="button is-link is-rounded mt-4"
+      [class]="{ 'is-loading': isSubmiting() }"
+    >
+      Login
+    </button>
+    <app-error-field [control]="signInForm" />
+  </form>
+</div>

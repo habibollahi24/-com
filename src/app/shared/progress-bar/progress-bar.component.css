@@ -1,0 +1,12 @@
+:host {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.progress {
+  height: 5px;
+  border-radius: 0;
+  transition: transform 3s ease-in-out;
+}

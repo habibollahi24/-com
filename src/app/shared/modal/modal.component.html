@@ -1,0 +1,12 @@
+<div class="modal-backdrop" (click)="closeModal()"></div>
+
+<div class="modal-container" animate.enter="fade-in">
+  <div class="modal-header" style="position: absolute; right: 10px; top: 10px">
+    <button class="delete is-large is-danger" (click)="closeModal()"></button>
+  </div>
+
+  <div class="modal-body p-4">
+    <ng-container *ngComponentOutlet="component; injector: injector">
+    </ng-container>
+  </div>
+</div>

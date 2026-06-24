@@ -1,0 +1,25 @@
+.card {
+  box-shadow: unset;
+  border: 2px solid #f9f9f9;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.email-text {
+  padding: 0.5rem;
+  background-color: #f9f9f989;
+}
+.sticky {
+  position: sticky;
+  top: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .email-text {
+    padding: 2rem 4rem;
+  }
+}

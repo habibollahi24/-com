@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "bootstrap/dist/css/bootstrap.min.css"; */
+
+/* @import "semantic-ui-css/semantic.min.css"; */
+@import "font-awesome/css/font-awesome.min.css";
+@import "bulma/css/bulma.min.css";
+
+/* *:focus {
+  outline: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+} */
+
+/* .button.is-link.is-rounded {
+  box-shadow:
+    0px 0px 0px 1px rgb(73, 73, 214),
+    0px 0px 0px 1px rgb(73, 73, 214);
+  border: 2px solid whitesmoke;
+} */
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    /* transform: rotate(10deg); */
+    transform: translate(100%);
+  }
+  to {
+    opacity: 1;
+    /* transform: rotate(0); */
+    transform: translate(0);
+  }
+}
+
+/* کلاس انیمیشن خروج */
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(100%);
+  }
+}

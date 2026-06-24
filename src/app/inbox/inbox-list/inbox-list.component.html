@@ -1,0 +1,24 @@
+@if (emails$ | async; as emails) {
+  @for (email of emails; track email.id) {
+    <div
+      class="card my-4"
+      [routerLink]="[email.id]"
+      routerLinkActive="email-active"
+    >
+      <div class="card-content">
+        <p class="is-size-6 has-text-link has-text-weight-semibold is-italic">
+          Subject:
+        </p>
+        <p class="subtitle">{{ email.subject }}</p>
+        <div>
+          <p
+            class="mt-3 is-size-6 has-text-link has-text-weight-semibold is-italic"
+          >
+            From:
+          </p>
+          <p class="">{{ email.from }}</p>
+        </div>
+      </div>
+    </div>
+  }
+}

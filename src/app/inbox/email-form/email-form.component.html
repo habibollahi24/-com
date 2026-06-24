@@ -1,0 +1,37 @@
+<h3 class="subtitle is-size-4">Compose New Email</h3>
+
+<form [formGroup]="emailForm">
+  <app-input label="To">
+    <input type="email" formControlName="to" class="input is-rounded" />
+    <app-error-field [control]="emailForm.controls.to"></app-error-field>
+  </app-input>
+  <app-input label="From">
+    <input
+      type="email"
+      formControlName="from"
+      class="input is-rounded"
+      [disabled]="true"
+    />
+    <app-error-field [control]="emailForm.controls.from"></app-error-field>
+  </app-input>
+  <app-input label="Subject">
+    <input type="text" formControlName="subject" class="input is-rounded" />
+    <app-error-field [control]="emailForm.controls.subject"></app-error-field>
+  </app-input>
+  <app-input label="Content">
+    <textarea
+      formControlName="text"
+      class="textarea is-rounded"
+      row="5"
+    ></textarea>
+    <app-error-field [control]="emailForm.controls.text"></app-error-field>
+  </app-input>
+  <button
+    class="button is-link is-rounded"
+    style="width: 100%"
+    (click)="save()"
+    [class.is-loading]="loading()"
+  >
+    Send
+  </button>
+</form>

@@ -1,0 +1,7 @@
+@if (progressbarService.isLoading()) {
+  <progress
+    class="progress is-link"
+    [value]="progressbarService.progress()"
+    max="100"
+  ></progress>
+}
